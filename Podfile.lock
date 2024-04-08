@@ -1,0 +1,20 @@
+PODS:
+  - SwiftyCam (4.0.0)
+  - "UIView+draggable (1.1.0)"
+
+DEPENDENCIES:
+  - SwiftyCam
+  - "UIView+draggable"
+
+SPEC REPOS:
+  trunk:
+    - SwiftyCam
+    - "UIView+draggable"
+
+SPEC CHECKSUMS:
+  SwiftyCam: 6e57914771d972fbe508e759dc9d0150a44a93fd
+  "UIView+draggable": ddfbeb6bdfdeba63d9ccf32dc9be2b66cc589717
+
+PODFILE CHECKSUM: 69c0cfba359589d2045853d76e096f93aaca715a
+
+COCOAPODS: 1.13.0

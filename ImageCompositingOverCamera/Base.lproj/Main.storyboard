@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tBu-pO-zD3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Decorate Photo View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="DecoratePhotoViewController" customModule="ViewCaptureSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QRc-Em-egg">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9xZ-3S-yIi">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="818"/>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="flowerpot" translatesAutoresizingMaskIntoConstraints="NO" id="YZg-3S-QuN">
+                                        <rect key="frame" x="54" y="122" width="117" height="117"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstItem="9xZ-3S-yIi" firstAttribute="leading" secondItem="QRc-Em-egg" secondAttribute="leading" id="F2r-oJ-ElC"/>
+                                    <constraint firstItem="9xZ-3S-yIi" firstAttribute="top" secondItem="QRc-Em-egg" secondAttribute="top" id="Rv1-vn-8hJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="9xZ-3S-yIi" secondAttribute="trailing" id="cvc-IW-mm8"/>
+                                    <constraint firstAttribute="bottom" secondItem="9xZ-3S-yIi" secondAttribute="bottom" id="k4O-Zh-eaD"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ErU-5u-T2f" customClass="CustomButton" customModule="ViewCaptureSample" customModuleProvider="target">
+                                <rect key="frame" x="15" y="61" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="1Ym-eb-0Ot"/>
+                                    <constraint firstAttribute="width" constant="24" id="eqg-pE-can"/>
+                                </constraints>
+                                <state key="normal" image="iconBackW"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="alphaWhenHighlight">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="adjustAlphaOnNormalImageWhenHighlighted" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="ut9-b1-RlY" kind="unwind" unwindAction="unwindToCameraController:" id="eTw-Tf-33i"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="QRc-Em-egg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="F46-MO-PpX"/>
+                            <constraint firstItem="ErU-5u-T2f" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="15" id="Spv-WV-U4x"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="QRc-Em-egg" secondAttribute="trailing" id="ffI-DB-ua3"/>
+                            <constraint firstItem="QRc-Em-egg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="kAj-KM-Rc1"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="QRc-Em-egg" secondAttribute="bottom" id="kV3-e6-PJC"/>
+                            <constraint firstItem="ErU-5u-T2f" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="17" id="l6Y-le-Gqg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2GY-KB-yA2"/>
+                    <connections>
+                        <outlet property="backgroundImageView" destination="9xZ-3S-yIi" id="5gV-Cq-C4T"/>
+                        <outlet property="targetView" destination="QRc-Em-egg" id="s5v-Pn-AC1"/>
+                        <outlet property="view1" destination="YZg-3S-QuN" id="bnR-dL-VV6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="ut9-b1-RlY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="732" y="122"/>
+        </scene>
+        <!--Decorate Result View Controller-->
+        <scene sceneID="FMx-f3-Ocb">
+            <objects>
+                <viewController id="R5J-66-rkW" customClass="DecorateResultViewController" customModule="ViewCaptureSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="s7J-GZ-Ggo">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9NM-dG-QxA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cKK-5f-3p7" customClass="CustomButton" customModule="ViewCaptureSample" customModuleProvider="target">
+                                <rect key="frame" x="15" y="61" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="QYh-Hu-Pfc"/>
+                                    <constraint firstAttribute="width" constant="24" id="nG9-yI-WK0"/>
+                                </constraints>
+                                <state key="normal" image="iconBackW"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="alphaWhenHighlight">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="adjustAlphaOnNormalImageWhenHighlighted" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="3Ac-zy-XZY" kind="unwind" unwindAction="unwindToCameraController:" id="YGJ-0w-iWa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="9NM-dG-QxA" firstAttribute="top" secondItem="lWz-xJ-zha" secondAttribute="top" id="6EF-gQ-TUy"/>
+                            <constraint firstItem="9NM-dG-QxA" firstAttribute="leading" secondItem="lWz-xJ-zha" secondAttribute="leading" id="RPq-6p-6Sd"/>
+                            <constraint firstItem="cKK-5f-3p7" firstAttribute="top" secondItem="lWz-xJ-zha" secondAttribute="top" constant="17" id="ehl-F8-7K8"/>
+                            <constraint firstItem="lWz-xJ-zha" firstAttribute="bottom" secondItem="9NM-dG-QxA" secondAttribute="bottom" id="kVK-Zn-zOW"/>
+                            <constraint firstItem="lWz-xJ-zha" firstAttribute="trailing" secondItem="9NM-dG-QxA" secondAttribute="trailing" id="pmK-e3-QKI"/>
+                            <constraint firstItem="cKK-5f-3p7" firstAttribute="leading" secondItem="lWz-xJ-zha" secondAttribute="leading" constant="15" id="t4d-Kr-hbw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="lWz-xJ-zha"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="aQP-iE-bPR"/>
+                    <connections>
+                        <outlet property="imageView" destination="9NM-dG-QxA" id="U1h-Ny-0du"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sLQ-DP-di1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="3Ac-zy-XZY" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="757" y="828"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="EoG-Dv-Fct">
+            <objects>
+                <navigationController navigationBarHidden="YES" id="tBu-pO-zD3" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="A67-Oe-tSw">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="xdd-YE-evn" kind="relationship" relationship="rootViewController" id="X2G-ZH-Nw2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q30-92-suC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-742" y="122"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="0og-PI-Qjg">
+            <objects>
+                <viewController id="xdd-YE-evn" customClass="CameraViewController" customModule="ViewCaptureSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Xjk-ca-Nj1">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jyG-Zv-AfI">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="47j-pZ-Ucc">
+                                        <rect key="frame" x="197" y="308.5" width="20" height="1"/>
+                                        <color key="backgroundColor" red="1" green="0.92549019610000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="Cqi-ka-w2M"/>
+                                            <constraint firstAttribute="height" constant="1" id="gMN-VL-xY6"/>
+                                        </constraints>
+                                    </view>
+                                    <view alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k0V-Bh-F8f">
+                                        <rect key="frame" x="206.5" y="299" width="1" height="20"/>
+                                        <color key="backgroundColor" red="1" green="0.92549019610000005" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1" id="TAF-6H-az0"/>
+                                            <constraint firstAttribute="height" constant="20" id="xok-6N-hJJ"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="k0V-Bh-F8f" firstAttribute="centerY" secondItem="47j-pZ-Ucc" secondAttribute="centerY" id="L94-gl-ZhI"/>
+                                    <constraint firstItem="47j-pZ-Ucc" firstAttribute="centerX" secondItem="jyG-Zv-AfI" secondAttribute="centerX" id="dlM-Sb-n8Y"/>
+                                    <constraint firstItem="k0V-Bh-F8f" firstAttribute="centerX" secondItem="jyG-Zv-AfI" secondAttribute="centerX" id="dqI-9k-8Nu"/>
+                                    <constraint firstItem="47j-pZ-Ucc" firstAttribute="centerY" secondItem="jyG-Zv-AfI" secondAttribute="centerY" constant="-100" id="uSf-o0-t5g"/>
+                                </constraints>
+                            </view>
+                            <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="flowerpot" translatesAutoresizingMaskIntoConstraints="NO" id="Z0o-rq-RZh">
+                                <rect key="frame" x="57" y="409" width="300" height="300"/>
+                            </imageView>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="5X5-jb-GmV">
+                                <rect key="frame" x="155" y="716" width="104" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="vL4-SJ-WnY"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="zoomScaleChanged:" destination="xdd-YE-evn" eventType="valueChanged" id="JMC-fp-V7m"/>
+                                </connections>
+                            </slider>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EKQ-uD-3ir" customClass="CustomButton" customModule="ViewCaptureSample" customModuleProvider="target">
+                                <rect key="frame" x="175" y="756" width="64" height="64"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="QYw-49-msd"/>
+                                    <constraint firstAttribute="width" constant="64" id="dND-mf-MRZ"/>
+                                </constraints>
+                                <state key="normal" image="btnPic"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="alphaWhenHighlight">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="adjustAlphaOnNormalImageWhenHighlighted" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="takePhoto:" destination="xdd-YE-evn" eventType="touchUpInside" id="BOf-vQ-WHo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tQg-7M-wpw" customClass="CustomButton" customModule="ViewCaptureSample" customModuleProvider="target">
+                                <rect key="frame" x="374" y="58" width="29" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="29" id="Hqf-jS-P6i"/>
+                                    <constraint firstAttribute="height" constant="30" id="lGA-Sw-JQb"/>
+                                </constraints>
+                                <state key="normal" image="iconChange"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="alphaWhenHighlight">
+                                        <real key="value" value="0.59999999999999998"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="adjustAlphaOnNormalImageWhenHighlighted" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="switchCamera:" destination="xdd-YE-evn" eventType="touchUpInside" id="Wg6-n1-488"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="VnC-qv-GKV" firstAttribute="trailing" secondItem="tQg-7M-wpw" secondAttribute="trailing" constant="11" id="3lb-3L-hSl"/>
+                            <constraint firstItem="5X5-jb-GmV" firstAttribute="centerX" secondItem="VnC-qv-GKV" secondAttribute="centerX" id="4KC-jp-1QP"/>
+                            <constraint firstItem="jyG-Zv-AfI" firstAttribute="leading" secondItem="VnC-qv-GKV" secondAttribute="leading" id="4fg-38-Zx4"/>
+                            <constraint firstItem="EKQ-uD-3ir" firstAttribute="top" secondItem="5X5-jb-GmV" secondAttribute="bottom" constant="10" id="NGQ-fu-kNo"/>
+                            <constraint firstItem="VnC-qv-GKV" firstAttribute="bottom" secondItem="EKQ-uD-3ir" secondAttribute="bottom" constant="42" id="Srz-BT-QZm"/>
+                            <constraint firstItem="Z0o-rq-RZh" firstAttribute="centerX" secondItem="VnC-qv-GKV" secondAttribute="centerX" id="SuI-gv-Bca"/>
+                            <constraint firstItem="VnC-qv-GKV" firstAttribute="bottom" secondItem="jyG-Zv-AfI" secondAttribute="bottom" id="WGY-jg-PuN"/>
+                            <constraint firstItem="tQg-7M-wpw" firstAttribute="top" secondItem="VnC-qv-GKV" secondAttribute="top" constant="14" id="g63-gi-BCw"/>
+                            <constraint firstItem="VnC-qv-GKV" firstAttribute="trailing" secondItem="jyG-Zv-AfI" secondAttribute="trailing" id="isV-SY-jUb"/>
+                            <constraint firstItem="jyG-Zv-AfI" firstAttribute="top" secondItem="VnC-qv-GKV" secondAttribute="top" id="sWQ-KW-Poh"/>
+                            <constraint firstItem="EKQ-uD-3ir" firstAttribute="centerX" secondItem="VnC-qv-GKV" secondAttribute="centerX" id="w75-Dp-iiu"/>
+                            <constraint firstItem="EKQ-uD-3ir" firstAttribute="top" secondItem="Z0o-rq-RZh" secondAttribute="bottom" constant="47" id="xfv-yO-OYI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="VnC-qv-GKV"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Vzy-6R-dVN"/>
+                    <connections>
+                        <outlet property="view1" destination="Z0o-rq-RZh" id="Ein-tk-aFh"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="decoratePhotoSegue" id="PNt-OV-3PQ"/>
+                        <segue destination="R5J-66-rkW" kind="show" identifier="decorateResultSegue" id="2Xj-ER-30k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZX5-6v-pgu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="0.0" y="121.875"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="btnPic" width="64" height="64"/>
+        <image name="flowerpot" width="300" height="300"/>
+        <image name="iconBackW" width="24" height="24"/>
+        <image name="iconChange" width="24" height="24"/>
+    </resources>
+</document>
